@@ -13,7 +13,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: ['https://collab-ai-amber.vercel.app/', 'http://localhost:3000'], // Add local dev origin
+    origin: ['*'], // Add local dev origin
     methods: ['GET', 'POST'], // Allow only specific methods
   },
 });
