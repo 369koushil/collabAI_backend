@@ -14,7 +14,7 @@ RUN npm install --production
 COPY . .
 
 # Expose the port your application will run on
-EXPOSE 3000
+EXPOSE 8080
 
 # Run the application in production mode
 CMD ["npm", "run", "start"]
