@@ -7,11 +7,15 @@ import aiRoutes from './routes/ai.routes.js';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
 connect();
-
+const corsOptions = {
+    origin: 'https://collab-ai-amber.vercel.app', // Allow only this domain
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Specify allowed HTTP methods (optional)
+    credentials: true, // Allow cookies or authorization headers (if needed)
+  };
 
 const app = express();
 
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

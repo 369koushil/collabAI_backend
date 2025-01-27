@@ -13,8 +13,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: ['*'], // Add local dev origin
-    methods: ['GET', 'POST'], // Allow only specific methods
+   origin:'*'
   },
 });
 
